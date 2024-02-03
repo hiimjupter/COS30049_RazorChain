@@ -1,7 +1,7 @@
 /**
  * Update: Responsive!
  * This is a component to use in /pages/profile/[walletAddress]
- * It is a card displaying token symbol and wallet balance
+ * It is a card showing token symbol and wallet balance
  */
 import { Card, Spinner, Stack, Text } from "@chakra-ui/react";
 import { useAddress, useContract, useContractEvents, useContractMetadata, useTokenBalance } from "@thirdweb-dev/react";
