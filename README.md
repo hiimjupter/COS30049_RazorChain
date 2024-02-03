@@ -1,40 +1,54 @@
-## Getting Started
+# RazorChain: Decentralized Trading Platform
 
-Create a project using this example:
+## About us:
+- University: Swinburne Technology of Technology, an Alliance program with FPT University (HCMC)
+- Course: COS30049 (Computing Technology Innovation Project)
+- Project Title: Assignment 1 (Static Website)
+- Lecturer: Dr. Sam Nguyen
+- Submitted Date: Saturday, Feb 3rd, 2024
 
-```bash
-npx thirdweb create --template next-typescript-starter
-```
+## Team Members
+- Nguyen Trung Hieu (103488337)
+- Nguyen Ngoc Gia Thinh (103809954)
+- Bui Nguyen Khanh Linh (104226062)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Technology Stack:
+RazorChain is a web3 decentralized trading platform built with the following technologies:
 
-On `pages/_app.tsx`, you'll find our `ThirdwebProvider` wrapping your app, this is necessary for our [hooks](https://portal.thirdweb.com/react) and
-[UI Components](https://portal.thirdweb.com/ui-components) to work.
+### Visual Studio Code
+An integrated development environment (IDE) developed by Microsoft that supports features such as debugging, syntax highlighting, intelligent code completion, snippets, code refactoring, and embedded Git.
 
-## Environment Variables
+### ReactJS
+An open-source JavaScript library for constructing user interfaces. It is component-based and maintained by Meta Platforms and a community of individual developers and companies.
 
-To run this project, you will need to add environment variables. Check the `.env.example` file for all the environment variables required and add it to `.env.local` file or set them up on your hosting provider.
+### NextJS
+A React-based open-source web development framework developed by Vercel. It enables server-side rendering and static website generation for web applications.
 
-## Deploy to IPFS
+### TypeScript
+A statically typed superset of JavaScript developed by Microsoft. It enhances code quality and understandability.
 
-Deploy a copy of your application to IPFS using the following command:
+### Chakra UI
+A simple, modular, and accessible component library that provides the building blocks for constructing React applications.
 
-```bash
-yarn deploy
-```
+### Thirdweb
+An all-in-one platform that facilitates the easy transition of ideas onto web3. It provides services such as deploying, interacting with, and managing Smart Contracts on any Ethereum Virtual Machine (EVM).
 
-## Learn More
+### Metamask
+A web-based cryptocurrency wallet used for interacting with the Ethereum blockchain.
 
-To learn more about thirdweb and Next.js, take a look at the following resources:
+### Ethereum Testnet – Sepolia Network
+One of several test networks available for the Ethereum blockchain. It allows developers to test and deploy smart contracts and decentralized applications (dApps) without risking actual funds or affecting the main network.
 
-- [thirdweb React Documentation](https://docs.thirdweb.com/react) - learn about our React SDK.
-- [thirdweb TypeScript Documentation](https://docs.thirdweb.com/typescript) - learn about our JavaScript/TypeScript SDK.
-- [thirdweb Portal](https://docs.thirdweb.com) - check our guides and development resources.
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Templates](https://thirdweb.com/templates)
+### Solidity
+An object-oriented programming language for implementing smart contracts on various blockchain platforms, most notably, Ethereum.
 
-You can check out [the thirdweb GitHub organization](https://github.com/thirdweb-dev) - your feedback and contributions are welcome!
+### GitHub & Git
+A platform that allows developers to create, store, manage, and share their code.
 
-## Join our Discord!
+### Ethers.JS (extended)
+A comprehensive and compact library for interacting with the Ethereum Blockchain and its ecosystem.
 
-For any questions, suggestions, join our discord at [https://discord.gg/thirdweb](https://discord.gg/thirdweb).
+## Repositories
+- [Dapp](https://github.com/hiimjupter/COS30049_RazorChain.git%29)
+- [Smart Contracts](https://github.com/hiimjupter/TokenTransfer-Smart-Contract.git%29)
+

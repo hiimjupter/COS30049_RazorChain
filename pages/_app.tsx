@@ -1,3 +1,7 @@
+/**
+ * This is a decentralized trading platform launched by Razor-OnChain
+ * Our group includes: Nguyen Trung Hieu (103488337), Nguyen Ngoc Gia Thinh (103809954), Bui Nguyen Khanh Linh (104226062)
+ */
 import type { AppProps } from "next/app";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
 import { ChakraProvider } from "@chakra-ui/react";

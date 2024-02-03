@@ -28,11 +28,12 @@ export default function ClaimPage() {
                         src={CLAIM_TOKEN_IMAGE}
                         height='80%'
                         width='80%'
+                        alt='Claim Token Image'
                     />
                 </Flex>
                 <Flex flexDirection={"column"} justifyContent={"center"}>
                     <Stack spacing={8}>
-                        <Heading fontSize={"5xl"}>Claim Swinburne {contractMetadata?.name}</Heading>
+                        <Heading fontSize={"5xl"}>Claim {contractMetadata?.name}</Heading>
                         <Text fontSize={"xl"}>This is the main currency for to-be-developed NFTs trading. Use this token to test and try the transfer feature for future airdrop!</Text>
                         <Text fontWeight={"bold"}>{claimAmount} ${contractMetadata?.symbol} tokens each faucet and up to {claimAmount*10} ${contractMetadata?.symbol} tokens per wallet!</Text>
                         <Box>
