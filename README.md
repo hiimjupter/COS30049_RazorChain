@@ -51,6 +51,3 @@ A comprehensive and compact library for interacting with the Ethereum Blockchain
 ## Repositories
 - [Dapp](https://github.com/hiimjupter/COS30049_RazorChain.git)
 - [Smart Contracts](https://github.com/hiimjupter/TokenTransfer-Smart-Contract.git)
-
-Commit Message Change
-
