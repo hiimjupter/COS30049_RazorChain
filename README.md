@@ -49,6 +49,6 @@ A platform that allows developers to create, store, manage, and share their code
 A comprehensive and compact library for interacting with the Ethereum Blockchain and its ecosystem.
 
 ## Repositories
-- [Dapp](https://github.com/hiimjupter/COS30049_RazorChain.git%29)
-- [Smart Contracts](https://github.com/hiimjupter/TokenTransfer-Smart-Contract.git%29)
+- [Dapp](https://github.com/hiimjupter/COS30049_RazorChain.git)
+- [Smart Contracts](https://github.com/hiimjupter/TokenTransfer-Smart-Contract.git)
 
