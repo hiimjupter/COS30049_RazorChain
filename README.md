@@ -1,5 +1,13 @@
 # RazorChain: Decentralized Trading Platform
 
+## Running Local Host
+In order to run local host and experience our static decentralized trading platform, please follow these steps in the terminal/command prompt:
+- Install node.js at: https://nodejs.org/en
+- Direct terminal or command prompt to the directory `token-transfer-app`
+- Install yarn global: `npm i --global yarn`
+- Install next.js global: `npm install next@latest react@latest react-dom@latest`
+- Run command: `yarn dev`
+
 ## About us:
 - University: Swinburne Technology of Technology, an Alliance program with FPT University (HCMC)
 - Course: COS30049 (Computing Technology Innovation Project)
