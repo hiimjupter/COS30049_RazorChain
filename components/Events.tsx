@@ -52,14 +52,13 @@ export default function Events() {
                     // Filter the events, only display the transaction if the current user's wallet address matches the to or from address
                     .filter((event: any) => event.data.sender === address || event.data.receiver === address)
                     // Structure the events based on index
-                    .map(async (event: any, index) => {
+                    .map(async (event: any) => {
                         // Get block number
                         const block = await provider.getBlock(event.transaction.blockNumber);
                         return (
                             // Structure of each Transaction History Card
-                            <Card key={index} p={8} my={4} boxShadow="2xl" borderRadius="lg" bg="gray.50" w={{ base: "100%", md: "auto" }}>
+                            <Card p={8} my={4} boxShadow="2xl" borderRadius="lg" bg="gray.50" w={{ base: "100%", md: "auto" }}>
                                 <Stack spacing={2}>
-                                    <Heading fontSize={"xl"} color="yellow.500">Transaction Index: {index + 1}</Heading>
                                     <Text fontSize={"md"}>Transaction Hash: <Code fontWeight={"semibold"}>{truncateAddress(event.transaction.transactionHash)}</Code></Text>
                                     <Flex flexDirection={{ base: "column", md: "row" }} alignItems={"center"}>
                                         <Text mr={2} fontSize={"md"}>Status</Text>

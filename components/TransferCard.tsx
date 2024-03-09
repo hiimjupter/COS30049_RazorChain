@@ -93,7 +93,7 @@ export default function TransferCard() {
              * Input fields: Receiver -> Amount -> Message
              */}
             <Input
-                placeholder="0x000000000"
+                placeholder="0x0000000000000000"
                 type="text"
                 value={formData.receiver}
                 onChange={(event) => handleChange(event, "receiver")}

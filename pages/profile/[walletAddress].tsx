@@ -2,11 +2,13 @@
  * Update: Responsive!
  * This is a My Account page
  */
-import { Avatar, Container, Flex, Heading, SimpleGrid, Spinner, Tag, Text, Box } from "@chakra-ui/react";
+import { Avatar, Container, Flex, Heading, SimpleGrid, Spinner, Tag, Text, Box, Stack } from "@chakra-ui/react";
 import { useAddress, useContract, useContractRead } from "@thirdweb-dev/react";
 import { TRANSFER_CONTRACT_ADDRESS } from "../../const/addresses";
-import BalanceCard from "../../components/BalanceCard";
+import UpdateCard from "../../components/UpdateCard";
 import Events from "../../components/Events"
+import BalanceCard from "../../components/BalanceCard";
+import UpdateButton from "../../components/UpdateButton";
 
 export default function AccountPage() {
     // Get current user's wallet address
@@ -60,6 +62,9 @@ export default function AccountPage() {
                     <Text>Connect Wallet</Text>
                 </Flex>
             )}
+            <Stack spacing={{ base: '4', md: '8' }} alignItems={"center"}>
+                <UpdateCard />
+            </Stack>
             <Box mt={20} w={"100%"}>
                 <Events />
             </Box>

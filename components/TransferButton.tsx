@@ -57,6 +57,8 @@ const TransferButton: React.FC<Props> = ({ tokenAddress, receiver, amount, messa
                     title: 'Transfer Pending',
                     description: 'Waiting for pending transactions!',
                     status: 'loading',
+                    duration: 1500,
+                    isClosable: true
                 })}
                 // Pop up successful message
                 onSuccess={() => toast({
@@ -67,9 +69,9 @@ const TransferButton: React.FC<Props> = ({ tokenAddress, receiver, amount, messa
                     isClosable: true,
                 })}
                 // Pop up failed message
-                onError={() => toast({
+                onError={(error) => toast({
                     title: 'Transfer Failed',
-                    description: "You have failed transferred tokens!",
+                    description: error.message.split('\n').find(line => line.startsWith('Reason:')),
                     status: 'error',
                     duration: 9000,
                     isClosable: true,
