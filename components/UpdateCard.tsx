@@ -8,7 +8,7 @@ export default function UpdateCard() {
     const address = useAddress();
     const { contract } = useContract(USER_INFO_UPDATE);
 
-    const [formData, setFormData] = useState({ name: '', email: '', phone_number: '' });
+    const [formData, setFormData] = useState({ name: '', stu_id: '', email: '', phone_number: '' });
 
     const { data: events, isLoading: isEventsLoading } = useContractEvents(
         contract,
@@ -25,10 +25,11 @@ export default function UpdateCard() {
     useEffect(() => {
         if (!isEventsLoading && events && events.length > 0) {
             const latestName = events[0].data.name;
+            const latestStu = events[0].data.stu_id;
             const latestEmail = events[0].data.email;
             const latestPhone = events[0].data.phone_number;
 
-            setFormData({ name: latestName, email: latestEmail, phone_number: latestPhone });
+            setFormData({ name: latestName, stu_id: latestStu, email: latestEmail, phone_number: latestPhone });
         }
     }, [isEventsLoading, events]);
 
@@ -43,12 +44,14 @@ export default function UpdateCard() {
         <Card w={{ base: "100%", md: "50%"}} p={20}>
             <Heading>User Information</Heading>
             <InputField label="Full name" value={formData.name} onChange={(event) => handleChange(event, "name")} />
+            <InputField label="StudentID" value={formData.stu_id} onChange={(event) => handleChange(event, "stu_id")} />
             <InputField label="Email Address" value={formData.email} onChange={(event) => handleChange(event, "email")} />
             <InputField label="Phone Number" value={formData.phone_number} onChange={(event) => handleChange(event, "phone_number")} />
             <Box mt={8}>
                 {address ? (
                     <UpdateButton
                         name={formData.name}
+                        stu_id={formData.stu_id}
                         email={formData.email}
                         phone_number={formData.phone_number}
                     />

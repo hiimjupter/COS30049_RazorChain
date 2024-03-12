@@ -11,11 +11,12 @@ import { useToast, Box } from "@chakra-ui/react";
 // Determine required info depended on the selected token
 type Props = {
     name: string;
+    stu_id: string;
     email: string;
     phone_number: string;
 };
 
-const UpdateButton: React.FC<Props> = ({ name, email, phone_number }) => {
+const UpdateButton: React.FC<Props> = ({ name, stu_id, email, phone_number }) => {
     // Get the transfer contract
     const {
         contract: updateContract
@@ -34,6 +35,7 @@ const UpdateButton: React.FC<Props> = ({ name, email, phone_number }) => {
                         "updateUserInfo",
                         [
                             name,
+                            stu_id,
                             email,
                             phone_number
                         ]
