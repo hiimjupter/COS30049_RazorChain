@@ -44,7 +44,7 @@ export default function UpdateCard() {
         <Card w={{ base: "100%", md: "50%"}} p={20}>
             <Heading>User Information</Heading>
             <InputField label="Full name" value={formData.name} onChange={(event) => handleChange(event, "name")} />
-            <InputField label="StudentID" value={formData.stu_id} onChange={(event) => handleChange(event, "stu_id")} />
+            <InputField label="Student ID" value={formData.stu_id} onChange={(event) => handleChange(event, "stu_id")} />
             <InputField label="Email Address" value={formData.email} onChange={(event) => handleChange(event, "email")} />
             <InputField label="Phone Number" value={formData.phone_number} onChange={(event) => handleChange(event, "phone_number")} />
             <Box mt={8}>
