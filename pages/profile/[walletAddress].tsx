@@ -44,16 +44,14 @@ export default function AccountPage() {
                     <Flex flexDirection={"column"} w={"100%"}>
                         <Heading>Token Balances</Heading>
                         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={4} mt={4}>
-                        {!isVerifiedTokensLoading ? (
-                            verifiedTokens.map((token: string) => (
                                 <BalanceCard
-                                    key={token}
-                                    tokenAddress={token}
+                                    symbol={"RZC"}
+                                    balance={333}
                                 />
-                            ))
-                        ) : (
-                            <Spinner />
-                        )}
+                                <BalanceCard
+                                    symbol={"SCI"}
+                                    balance={888}
+                                />
                         </SimpleGrid>
                     </Flex>
                 </Flex>

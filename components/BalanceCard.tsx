@@ -8,26 +8,13 @@ import { useAddress, useContract, useContractEvents, useContractMetadata, useTok
 
 // Must get tokenAddress to get verifiedTokensList
 type Props = {
-    tokenAddress: string;
+    symbol: string;
+    balance: number;
 };
 
-export default function BalanceCard({ tokenAddress }: Props) {
+export default function BalanceCard({ symbol, balance }: Props) {
     // Get current user's address
     const address = useAddress();
-    // Get token smart contract address
-    const {
-        contract
-    } = useContract(tokenAddress);
-    // Get token's info such as name, symbol, decimals,...
-    const {
-        data: contractMetadata,
-        isLoading: isContractMetadataLoading,
-    } = useContractMetadata(contract);
-    // Check wallet balance of current user according to that token
-    const {
-        data: tokenBalance,
-        isLoading: isTokenBalanceLoading,
-    } = useTokenBalance(contract, address);
 
     /**
      * const {
@@ -46,19 +33,11 @@ export default function BalanceCard({ tokenAddress }: Props) {
              * Show the symbol of token
              * Show the wallet balance after loading tokenbalance
              */}
-            {!isContractMetadataLoading ? (
-                <Stack textAlign={"center"}>
-                    <Text fontWeight={"bold"} fontSize={"2xl"}>{contractMetadata?.symbol}</Text>
-                    <Text>Balance:</Text>
-                    {!isTokenBalanceLoading ? (
-                        <Text fontSize={"3xl"} fontWeight={"bold"}>{tokenBalance?.displayValue}</Text>
-                    ) : (
-                        <Spinner />
-                    )}
-                </Stack>
-            ) : (
-                <Spinner />
-            )}
+            <Stack textAlign={"center"}>
+                <Text fontWeight={"bold"} fontSize={"2xl"}>{symbol}</Text>
+                <Text>Balance:</Text>
+                <Text fontSize={"3xl"} fontWeight={"bold"}>{balance}</Text>
+            </Stack>
         </Card>
     )
 }
