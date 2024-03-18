@@ -1,5 +1,5 @@
 import { Card, Heading, Input, Text, Box } from "@chakra-ui/react";
-import { useAddress, useContract } from "@thirdweb-dev/react";
+import { useAddress, useContract, useContractEvents } from "@thirdweb-dev/react";
 import { useState, useEffect } from "react";
 import UpdateButton from "./UpdateButton";
 import { USER_INFO_UPDATE } from "../const/addresses";
@@ -10,29 +10,28 @@ export default function UpdateCard() {
 
     const [formData, setFormData] = useState({ name: '', stu_id: '', email: '', phone_number: '' });
 
-    // const { data: events, isLoading: isEventsLoading } = useContractEvents(
-    //     contract,
-    //     "InfoUpdated",
-    //     {
-    //         queryFilter: {
-    //             filters: { addr: address },
-    //             order: "desc",
-    //         },
-    //         subscribe: true,
-    //     }
-    // );
+    const { data: events, isLoading: isEventsLoading } = useContractEvents(
+        contract,
+        "InfoUpdated",
+        {
+            queryFilter: {
+                filters: { addr: address },
+                order: "desc",
+            },
+            subscribe: true,
+        }
+    );
 
     useEffect(() => {
-        // Only set form data if it's empty
-        if (!formData.name && !formData.stu_id && !formData.email && !formData.phone_number) {
-            const latestName = "Latest Full Name";
-            const latestStu = "Latest Student ID";
-            const latestEmail = "Latest Email";
-            const latestPhone = "Lastest Phone Number";
+        if (!isEventsLoading && events && events.length > 0) {
+            const latestName = events[0].data.name;
+            const latestStu = events[0].data.stu_id;
+            const latestEmail = events[0].data.email;
+            const latestPhone = events[0].data.phone_number;
 
             setFormData({ name: latestName, stu_id: latestStu, email: latestEmail, phone_number: latestPhone });
         }
-    });
+    }, [isEventsLoading, events]);
 
     const handleChange = (e: any, name: any) => {
         setFormData((prevState) => ({
